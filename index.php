@@ -3,7 +3,7 @@
  <head>
     <title>Projeto 01</title>
     <script src="https://kit.fontawesome.com/17abfde62c.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" >
     <link href="estilos/style.css" rel="stylesheet">
     <meta name="viewport" content="width-device-width, initial-scale-1.0">
     <meta name="description" content="Descrição do meu website">

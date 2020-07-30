@@ -47,9 +47,8 @@ header .logo{
 }
 
 nav.desktop ul{
-    position: relative;
     list-style-type: none;
-    top: 6px;
+    margin-top: 6px;
 }
 
 nav.desktop li{
