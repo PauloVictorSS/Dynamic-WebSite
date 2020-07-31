@@ -33,7 +33,9 @@ img{
     width: 100%;
     max-width: 400px;
 }
-
+p{
+    font-size:16px;
+}
 
 /** Estilização do Site **/
 
@@ -140,7 +142,6 @@ section.descricao-autor h2{
 }
 
 section.descricao-autor p{
-    font-size: 16px;
     margin-top: 10px;
 }
 
@@ -174,7 +175,6 @@ section.especialidades h2.title{
 
 .box-especialidade p{
     color: #444;
-    font-size: 18px;
     margin-top: 20px;
 }
 
@@ -200,13 +200,11 @@ section.extras .depoimento-single{
 }
 
 p.depoimento-descricao{
-    font-size: 18px;
     color: white;
     font-weight: 300;
 }
 
-p.nome-autor{    
-    font-size: 18px;
+p.nome-autor{
     color: white;
     margin-top: 10px;
     font-weight: bold;
@@ -231,7 +229,6 @@ footer{
 
 footer p{
     color: white;
-    font-size: 16px;
     font-weight: 400;
     text-align: center;
 }
@@ -254,15 +251,12 @@ footer p{
         display: block;
         margin: 0 auto;
     }
-
     nav.desktop{
         display: none;
     }
-
     nav.mobile{
         display: block;
     }
-
     nav.mobile ul{
         top: 55px;
         z-index: 3;
@@ -272,9 +266,7 @@ footer p{
         display: block;
         text-align: center;
         width: 100%;
-        
     }
-
     nav.mobile li{
         font-weight: 300;
         width: 100%;
@@ -284,13 +276,11 @@ footer p{
         font-size: 17px;
         background: #fff;
     }
-
     nav.mobile li a {
         display: block;
         text-decoration: none;
         color: #444;
     }
-
     .botao-menu-mobile{
         cursor: pointer;
         color: white;
