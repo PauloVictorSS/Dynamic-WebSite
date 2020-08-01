@@ -31,11 +31,11 @@ $(function(){
         setInterval(function(){
 
             //Trocando as imagens
-            $('.banner-single').eq(curSlide).fadeOut(2000);
+            $('.banner-single').eq(curSlide).stop().fadeOut(2000);
             curSlide++;
             if(curSlide > maxSlide)
                 curSlide = 0;
-            $('.banner-single').eq(curSlide).fadeIn(2000);
+            $('.banner-single').eq(curSlide).stop().fadeIn(2000);
 
             //Trocar a cor do bullets da imagem correspondente
             $('.bullets span').removeClass('active-slider');
@@ -49,9 +49,9 @@ $(function(){
         var currentBullet = $(this);
 
         //Trocando a imagem do bullet selecionado
-        $('.banner-single').eq(curSlide).fadeOut(1000);
+        $('.banner-single').eq(curSlide).stop().fadeOut(1000);
         curSlide = currentBullet.index();
-        $('.banner-single').eq(curSlide).fadeIn(1000);
+        $('.banner-single').eq(curSlide).stop().fadeIn(1000);
 
         //Trocar a cor do bullets da imagem correspondente
         $('.bullets span').removeClass('active-slider');

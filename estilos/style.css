@@ -118,16 +118,16 @@ div.bullets{
 
 div.bullets span{
     display: inline-block; /* Colocando todos os elementos um ao lado do outro */
-    width: 15px;
-    height: 15px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     cursor: pointer;
-    background-color: #777;
+    background-color: white;
     margin: 0 10px;
 }
 
 div.bullets span.active-slider{
-    background-color: white;
+    background-color: #3D437A;
 }
 
 .overlay{

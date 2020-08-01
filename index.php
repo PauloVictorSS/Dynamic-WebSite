@@ -3,13 +3,15 @@
 <html lang='pt-br'>
 <head>
     <title>Projeto 01</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="<?php echo INCLUDE_PATH; ?>estilos/style.css" rel="stylesheet">
+    <meta charset="utf-8">
     <meta name="viewport" content="width-device-width, initial-scale-1.0">
     <meta name="description" content="Descrição do meu website">
     <meta name="keywords" content="palavbra-chave, do meu, site">
-    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <link href="<?php echo INCLUDE_PATH; ?>estilos/style.css" rel="stylesheet">
+    <link rel="icon" href="<?php echo INCLUDE_PATH; ?>favicon.ico" type="image/x-icon">
+    
 </head>
 <body>
 
@@ -85,8 +87,8 @@
 
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
-
     <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/exemplo.js"></script>
 
 </body>
 </html>
