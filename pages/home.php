@@ -1,11 +1,18 @@
-<section class="banner-principal">
+    <section class="banner-principal">
+        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/slide/imagem0.png);" class="banner-single" ></div>
+        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/slide/imagem1.jpg);" class="banner-single"></div>
+        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/slide/imagem2.jpg);" class="banner-single"></div>
+        <div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/slide/imagem3.jpg);" class="banner-single"></div>
         <div class="overlay"></div>
         <div class="center">
             <form>
-                <h2>Qual seu melhor e-mail</h2>
+                <h2><b>Qual seu melhor e-mail</b></h2>
                 <input type="email" name="email" required />
                 <input type="submit" name="acao" value="Cadastrar!" />
             </form>
+        </div>
+        <div class="bullets">
+
         </div>
     </section>
 
@@ -17,7 +24,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolore dicta reprehenderit quibusdam dignissimos, quis est atque, placeat alias consequatur perferendis unde autem! Cumque, doloribus voluptas sit obcaecati impedit beatae.</p>
             </div>
             <div class="w50 left">
-                <img src="<?php echo INCLUDE_PATH; ?>imagens/foto2.jpg" class="right">
+                <img src="<?php echo INCLUDE_PATH; ?>imagens/foto2.jpg" class="right" id="foto">
             </div>
             <div class="clear"></div>
         </div>

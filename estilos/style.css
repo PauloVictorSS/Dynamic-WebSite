@@ -5,7 +5,7 @@
     font-family: "Open Sans";
 }
 html, body{
-    overflow-x: hidden;
+    overflow-x: hidden; /* Retirando a barra de bolagem da horizontal (caso apareça) */
     height: 100%;
 }
 input{
@@ -23,6 +23,7 @@ a{
 }
 
 /** Boot CSS **/
+
 
 .center{
     max-width: 1280px;
@@ -44,7 +45,7 @@ a{
     float: right;
 }
 .clear{
-    clear: both; 
+    clear: both; /* Reseta todos os floats que foram usados*/
 }
 
 
@@ -67,7 +68,7 @@ header .logo a{
 }
 
 .mobile{
-    display: none;
+    display: none; /* Fazendo o menu do mobile sumir */
 }
 
 nav.desktop ul{
@@ -91,9 +92,42 @@ nav.desktop a{
 .banner-principal{
     width: 100%;
     height: 500px;
-    background-image: url('../imagens/banner.png');
-    background-size: cover;
+    background-size: cover; /*Fazendo o background esticar até cobrir todo o container*/
     position: relative;
+}
+
+.banner-principal .banner-single{
+    
+    position: absolute; /* O elemento é posicionado em relação ao seu primeiro 
+                        elemento ancestral posicionado (não estático) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+div.bullets{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+}
+
+div.bullets span{
+    display: inline-block; /* Colocando todos os elementos um ao lado do outro */
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #777;
+    margin: 0 10px;
+}
+
+div.bullets span.active-slider{
+    background-color: white;
 }
 
 .overlay{
@@ -102,7 +136,7 @@ nav.desktop a{
     top: 0;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    z-index: 1; /* Especifica a ordem da pilha de um elemento (Quanto menor mais ao fundo) */
     background-color: rgba(51,51,51,0.6);
 }
 
@@ -323,6 +357,7 @@ section.contato{
     cursor: pointer;
 }
 
+/* Mexendo no layout das telas caso a tela tenha até 700px de largura*/
 @media screen and (max-width: 700px){
     .w50{
         padding: 20px;
@@ -336,8 +371,8 @@ section.contato{
         padding: 20px 40px;
         margin: 0;
     }
-    img{
-        float: none !important;
+    .descricao-autor img#foto{
+        float: none;
         display: block;
         margin: 0 auto;
     }

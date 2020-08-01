@@ -15,9 +15,14 @@
 
     <?php
     
+        /* Verificando se uma das âncoras foi selecionada */
+
+        //Retornando a url do site
         $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
         switch ($url) {
+            //De acordo com a url utilizada cria um elemento com esse nome para a
+            //futura manipulação pelo JavaScript com o JQuery
             case 'sobre':
                 echo "<target target='sobre'>";
                 break;
@@ -57,9 +62,14 @@
     </header>
     <?php
 
+        /* Incluindo o arquivo da url */        
+
+        //Verificando se a url escolhida existe
         if(file_exists('pages/'.$url.'.php'))
-            include('pages/'.$url.'.php');
+            include('pages/'.$url.'.php'); //incluindo a página da url
         else{
+
+            //Caso ela não exista, há o redirecionamento para a página de erro 404
             if($url != 'servicos' && $url != 'sobre')
                 header("Location: pages/404.php");
             else
@@ -75,6 +85,8 @@
 
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
+
+    <script src="<?php echo INCLUDE_PATH; ?>js/slider.js"></script>
 
 </body>
 </html>
