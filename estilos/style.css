@@ -4,6 +4,22 @@
     box-sizing: border-box;
     font-family: "Open Sans";
 }
+html, body{
+    overflow-x: hidden;
+}
+input{
+    border:0;
+}
+img{
+    width: 100%;
+    max-width: 400px;
+}
+p{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
 
 /** Boot CSS **/
 
@@ -29,13 +45,7 @@
 .clear{
     clear: both; 
 }
-img{
-    width: 100%;
-    max-width: 400px;
-}
-p{
-    font-size: 20px;
-}
+
 
 /** Estilização do Site **/
 
@@ -48,6 +58,10 @@ header .logo{
     font-size: 23px;
     font-weight: 300;
     text-transform: uppercase;
+}
+
+header .logo a{
+    text-decoration: none;
     color: white;
 }
 
@@ -233,6 +247,26 @@ footer p{
     text-align: center;
 }
 
+section.erro404 {
+    text-align: center;
+}
+
+section.erro404 h1{
+    border-top: 2px solid #a31300be;
+    margin-top: 50px;
+    font-size: 40px;
+    color: #a31300be;
+}
+
+section.erro404 p{
+    margin-top: 30px;
+    color: black;
+}
+
+section.erro404 p a:hover{
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 700px){
     .w50{
         padding: 20px;
@@ -258,23 +292,25 @@ footer p{
         display: block;
     }
     nav.mobile ul{
-        top: 55px;
+        top: 75px;
         z-index: 3;
         list-style-type: none;
         position: absolute;
         left: 0;
-        display: block;
+        display: none;
         text-align: center;
         width: 100%;
     }
     nav.mobile li{
         font-weight: 300;
         width: 100%;
-        display: none;
         border-bottom: 1px solid #ccc;
         padding: 8px 0;
         font-size: 17px;
         background: #fff;
+    }
+    nav.mobile li:hover{
+        background: #f7f7f7;
     }
     nav.mobile li a {
         display: block;

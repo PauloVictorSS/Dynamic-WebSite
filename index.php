@@ -1,10 +1,11 @@
-<!DOCTYPE html>
+<?php include "config.php";   ?>
+<!doctype html>
 <html lang='pt-br'>
 <head>
     <title>Projeto 01</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <link href="estilos/style.css" rel="stylesheet">
+    <link href="<?php echo INCLUDE_PATH; ?>estilos/style.css" rel="stylesheet">
     <meta name="viewport" content="width-device-width, initial-scale-1.0">
     <meta name="description" content="Descrição do meu website">
     <meta name="keywords" content="palavbra-chave, do meu, site">
@@ -13,13 +14,13 @@
 <body>
     <header>
         <div class="center">
-            <div class="logo left">Logomarca</div>
+            <div class="logo left"><a href="index.php">Logomarca</a></div>
             <nav class="desktop right">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
             <nav class="mobile right">
@@ -27,91 +28,27 @@
                     <i class="fa fa-bars" aria-hidden="true"></i>
                 </div>
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Sobre</a></li>
-                    <li><a href="">Serviços</a></li>
-                    <li><a href="">Contato</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>sobre">Sobre</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>servicos">Serviços</a></li>
+                    <li><a href="<?php echo INCLUDE_PATH; ?>contato">Contato</a></li>
                 </ul>
             </nav>
         </div>
         <div class="clear"></div>
     </header>
 
-    <section class="banner-principal">
-        <div class="overlay"></div>
-        <div class="center">
-            <form>
-                <h2>Qual seu melhor e-mail</h2>
-                <input type="email" name="email" required />
-                <input type="submit" name="acao" value="Cadastrar!" />
-            </form>
-        </div>
-    </section>
+    <?php
+    
+        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
-    <section class="descricao-autor">
-        <div class="center">
-            <div class="w50 left">
-                <h2>Paulo Victor</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore voluptas deserunt minima ducimus cum! Rerum nisi pariatur soluta voluptatibus laboriosam tempore cupiditate, doloremque quasi et! Veniam repellat tenetur aliquid.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolore dicta reprehenderit quibusdam dignissimos, quis est atque, placeat alias consequatur perferendis unde autem! Cumque, doloribus voluptas sit obcaecati impedit beatae.</p>
-            </div>
-            <div class="w50 left">
-                <img src="imagens/foto2.jpg" class="right">
-            </div>
-            <div class="clear"></div>
-        </div>
-    </section>
+        if(file_exists('pages/'.$url.'.php')){
+            include('pages/'.$url.'.php');
+        }else{
+            header("Location: pages/404.php");
+        }
 
-    <section class="especialidades">
-        <div class="center">
-            <h2 class="title">Especialidades</h2>
-            <div class="w33 box-especialidade left">
-                <h3><i class="fa fa-css3"></i></h3>
-                <h4>CSS3</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, hic. Excepturi sed amet, eaque sequi exercitationem itaque illo perferendis consectetur reprehenderit natus tenetur dolorum, iure rerum mollitia quo nihil impedit?</p>
-            </div>
-            <div class="w33 box-especialidade left">
-                <h3><i class="fa fa-html5"></i></h3>
-                <h4>HTML5</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, hic. Excepturi sed amet, eaque sequi exercitationem itaque illo perferendis consectetur reprehenderit natus tenetur dolorum, iure rerum mollitia quo nihil impedit?</p>
-            </div>
-            <div class="w33 box-especialidade left">
-                <h3><i class="fa fa-code"></i></h3>
-                <h4>JavaScript</h4>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia, hic. Excepturi sed amet, eaque sequi exercitationem itaque illo perferendis consectetur reprehenderit natus tenetur dolorum, iure rerum mollitia quo nihil impedit?</p>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </section>
-
-    <section class="extras">
-        <div class="center">
-            <div class="w50 left depoimentos-container">
-                <h2 class="title">Depoimentos dos nossos clientes</h2>
-                <div class="depoimento-single">
-                    <p class="depoimento-descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident pariatur omnis nam eius nihil, eaque, cumque totam velit aspernatur minus iure rem iusto laudantium illo ullam, reiciendis alias libero aliquam?Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="nome-autor">Lorem Ipsum</p>
-                </div>
-                <div class="depoimento-single">
-                    <p class="depoimento-descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident pariatur omnis nam eius nihil, eaque, cumque totam velit aspernatur minus iure rem iusto laudantium illo ullam, reiciendis alias libero aliquam?Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="nome-autor">Lorem Ipsum</p>
-                </div>
-                <div class="depoimento-single">
-                    <p class="depoimento-descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident pariatur omnis nam eius nihil, eaque, cumque totam velit aspernatur minus iure rem iusto laudantium illo ullam, reiciendis alias libero aliquam?Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                    <p class="nome-autor">Lorem Ipsum</p>
-                </div>
-            </div>
-            <div class="w50 left servicos-container">
-                <h2 class="title">Serviços</h2>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae id necessitatibus aliquam rerum officiis inventore ducimus unde nihil tenetur minima autem ipsum animi, obcaecati esse quisquam! Iure nesciunt ad earum.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae id necessitatibus aliquam rerum officiis inventore ducimus unde nihil tenetur minima autem ipsum animi, obcaecati esse quisquam! Iure nesciunt ad earum.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae id necessitatibus aliquam rerum officiis inventore ducimus unde nihil tenetur minima autem ipsum animi, obcaecati esse quisquam! Iure nesciunt ad earum.</li>
-                </ul>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </section>
+    ?>
 
     <footer>
         <div class="center">
@@ -119,5 +56,7 @@
         </div>
     </footer>
 
+    <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
+    <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
 </body>
 </html>
