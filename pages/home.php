@@ -11,7 +11,7 @@
 
     <section class="descricao-autor">
         <div class="center">
-            <div class="w50 left">
+            <div id="sobre" class="w50 left">
                 <h2>Paulo Victor</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia inventore voluptas deserunt minima ducimus cum! Rerum nisi pariatur soluta voluptatibus laboriosam tempore cupiditate, doloremque quasi et! Veniam repellat tenetur aliquid.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti dolore dicta reprehenderit quibusdam dignissimos, quis est atque, placeat alias consequatur perferendis unde autem! Cumque, doloribus voluptas sit obcaecati impedit beatae.</p>
@@ -47,7 +47,7 @@
 
     <section class="extras">
         <div class="center">
-            <div class="w50 left depoimentos-container">
+            <div id="servicos" class="w50 left depoimentos-container">
                 <h2 class="title">Depoimentos dos nossos clientes</h2>
                 <div class="depoimento-single">
                     <p class="depoimento-descricao">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident pariatur omnis nam eius nihil, eaque, cumque totam velit aspernatur minus iure rem iusto laudantium illo ullam, reiciendis alias libero aliquam?Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>

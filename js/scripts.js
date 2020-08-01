@@ -1,5 +1,6 @@
 $(function(){
     //Todo o nosso código de script
+
     $('nav.mobile').click(function(){
         //O que vai acontecer quando clicarmos no nav.mobile
         var listaMenu = $('nav.mobile ul');
@@ -18,5 +19,18 @@ $(function(){
         }
 
     })
+
+    if($('target').length > 0){
+        var elemento = '#'+$('target').attr('target');
+        var divScroll = $(elemento).offset().top;
+
+        if(divScroll > 1000){
+            $('html,body').animate({scrollTop:divScroll}, 1800);
+        }
+        else{
+            $('html,body').animate({scrollTop:divScroll}, 1000);
+        }
+        
+    }
 
 })

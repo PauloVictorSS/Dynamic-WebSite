@@ -1,5 +1,5 @@
 <?php include "config.php";   ?>
-<!doctype html>
+<!DOCTYPE html>
 <html lang='pt-br'>
 <head>
     <title>Projeto 01</title>
@@ -12,9 +12,27 @@
     <meta charset="utf-8" />
 </head>
 <body>
+
+    <?php
+    
+        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
+
+        switch ($url) {
+            case 'sobre':
+                echo "<target target='sobre'>";
+                break;
+
+            case 'servicos':
+                echo "<target target='servicos'>";
+                break;
+
+        }
+    
+    ?>
+
     <header>
         <div class="center">
-            <div class="logo left"><a href="index.php">Logomarca</a></div>
+            <div class="logo left"><a href="<?php echo INCLUDE_PATH; ?>">Logomarca</a></div>
             <nav class="desktop right">
                 <ul>
                     <li><a href="<?php echo INCLUDE_PATH; ?>">Home</a></li>
@@ -37,19 +55,18 @@
         </div>
         <div class="clear"></div>
     </header>
-
     <?php
-    
-        $url = isset($_GET['url']) ? $_GET['url'] : 'home';
 
-        if(file_exists('pages/'.$url.'.php')){
+        if(file_exists('pages/'.$url.'.php'))
             include('pages/'.$url.'.php');
-        }else{
-            header("Location: pages/404.php");
+        else{
+            if($url != 'servicos' && $url != 'sobre')
+                header("Location: pages/404.php");
+            else
+                include('pages/home.php');
         }
 
     ?>
-
     <footer>
         <div class="center">
             <p>Paulo Victor - Todos os direitos reservados</p>
@@ -58,5 +75,6 @@
 
     <script src="<?php echo INCLUDE_PATH; ?>js/jquery.js"></script>
     <script src="<?php echo INCLUDE_PATH; ?>js/scripts.js"></script>
+
 </body>
 </html>
