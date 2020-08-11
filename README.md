@@ -7,7 +7,6 @@ Exemplo de uma aplicação web dinâmica com funcionalidades básicas: Cadastro,
 Aplicação feita com:
 - HTML5
 - CSS3
-- JavaScript
 - JQuery
 - PHP
 - SQL
