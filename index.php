@@ -35,9 +35,7 @@
 
         }
     
-    ?>
-
-        
+    ?> 
 
     <header>
         <div class="center">

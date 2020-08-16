@@ -5,7 +5,31 @@
         <div style="background-image: url(<?php echo INCLUDE_PATH; ?>imagens/slide/imagem3.jpg);" class="banner-single"></div>
         <div class="overlay"></div>
         <div class="center">
-            <form>
+
+        <?php
+        
+            /* if(isset($_POST['acao'])){
+                //Enviei o formulário
+
+                $email = $POST["email"];
+
+                $mail = new Email('exemplo.de.host', 'email@rementede.com', 'senhaRementente', 'nomeRemetente');
+
+                $info = array('assunto' => 'Assunto do E-mail', 'corpo' => 'Corpo do E-mail');
+                $mail->addAdress('email.quem@vai.receber', 'nomeRecebedorCasoNecessario');
+                $mail->formatarEmail($info);
+
+                if($mail->enviarEmail())
+                    echo "<script>alert('Email enviado com sucesso')</script>";
+                else
+                    echo "<script>alert('Erro no envio de Email')</script>";
+                
+
+            } */
+
+        ?>
+
+            <form method="POST">
                 <h2><b>Qual seu melhor e-mail</b></h2>
                 <input type="email" name="email" required />
                 <input type="submit" name="acao" value="Cadastrar!" />
