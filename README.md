@@ -1,10 +1,10 @@
-# Site dinâmico
+# Dynamic Website
 
-## Exemplo de uma aplicação web dinâmica 
+## Example of a Dynamic Web Application 
 
-Exemplo de uma aplicação web dinâmica com funcionalidades básicas: Cadastro, login, envio de e-mail e um painel de controle
+Example of a dynamic website with basic functionality: Registration, login, sending e-mail and a control panel
 
-Aplicação feita com:
+Application made with:
 - HTML5
 - CSS3
 - JQuery
