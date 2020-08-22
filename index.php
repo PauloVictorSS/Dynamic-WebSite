@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang='pt-br'>
 <head>
-    <title>Projeto 01</title>
+    <title>Site Dinâmico</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width-device-width, initial-scale-1.0">
     <meta name="description" content="Descrição do meu website">
