@@ -11,7 +11,7 @@
             /* if(isset($_POST['acao'])){
                 //Enviei o formulário
 
-                $email = $POST["email"];
+                $email = $_POST["email"];
 
                 $mail = new Email('exemplo.de.host', 'email@rementede.com', 'senhaRementente', 'nomeRemetente');
 
@@ -29,7 +29,7 @@
 
         ?>
 
-            <form method="POST">
+            <form action="<?php echo INCLUDE_PATH; ?>" method="POST">
                 <h2><b>Qual seu melhor e-mail</b></h2>
                 <input type="email" name="email" required />
                 <input type="submit" name="acao" value="Cadastrar!" />
