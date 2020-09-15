@@ -2,7 +2,7 @@
 
 ## Example of a Dynamic Web Application 
 
-Example of a dynamic website with basic functionality: Registration, login, sending e-mail and a control panel
+Example of a dynamic website
 
 Application made with:
 - HTML5
